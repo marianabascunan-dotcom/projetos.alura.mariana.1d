@@ -1,0 +1,15 @@
+O MISTÉRIO DA BIBLIOTECA ENCANTADA
+Autora: Mariana Bascunan
+
+COMO ABRIR
+1. Descompacte o arquivo ZIP.
+2. Abra a pasta Mariana_Bascunan.
+3. Clique duas vezes no arquivo index.html.
+
+ARQUIVOS
+- index.html: estrutura e história da aventura.
+- style.css: cores, fontes e aparência.
+- script.js: troca as etapas conforme os botões são clicados.
+- img: ilustrações utilizadas no projeto.
+
+O projeto também pode ser aberto no Visual Studio Code.

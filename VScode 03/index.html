@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mariana Bascunan">
+    <title>O Mistério da Biblioteca Encantada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="aventura">
+        <header>
+            <span class="autoria">Projeto de Mariana Bascunan</span>
+            <h1>O Mistério da Biblioteca Encantada</h1>
+        </header>
+
+        <section class="passo ativo" id="passo-0">
+            <img src="img/biblioteca.svg" alt="Uma biblioteca antiga e misteriosa durante a noite">
+            <p>Depois da aula, Mariana encontra uma chave dourada caída perto da biblioteca da escola. Ao entrar no lugar silencioso, percebe uma luz azul saindo de uma estante e escuta um relógio tocar treze vezes.</p>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="1">Investigar a estante iluminada</button>
+                <button class="btn-proximo" data-proximo="2">Procurar a origem do som</button>
+            </div>
+        </section>
+
+        <section class="passo" id="passo-1">
+            <img src="img/livro-magico.svg" alt="Um livro mágico aberto, emitindo luz azul">
+            <p>Entre os livros, Mariana encontra um volume chamado “As Histórias Esquecidas”. Quando aproxima a chave, o livro se abre sozinho e mostra um mapa incompleto.</p>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="3">Seguir o mapa</button>
+                <button class="btn-proximo" data-proximo="4">Ler o aviso escrito no livro</button>
+            </div>
+        </section>
+
+        <section class="passo" id="passo-2">
+            <img src="img/relogio.svg" alt="Um grande relógio antigo com símbolos secretos">
+            <p>O som vem de um relógio antigo. Atrás do pêndulo existe uma pequena fechadura, do tamanho exato da chave dourada. No mostrador, uma frase diz: “O conhecimento abre caminhos”.</p>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="5">Usar a chave no relógio</button>
+                <button class="btn-proximo" data-proximo="1">Voltar e examinar a estante</button>
+            </div>
+        </section>
+
+        <section class="passo" id="passo-3">
+            <img src="img/passagem.svg" alt="Uma passagem secreta iluminada atrás de uma estante">
+            <p>O mapa leva Mariana até uma passagem secreta. No fim do corredor há duas portas: uma marcada com uma estrela e outra marcada com uma lua.</p>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="6">Abrir a porta da estrela</button>
+                <button class="btn-proximo" data-proximo="7">Abrir a porta da lua</button>
+            </div>
+        </section>
+
+        <section class="passo" id="passo-4">
+            <img src="img/livro-magico.svg" alt="Livro mágico revelando uma mensagem secreta">
+            <p>O aviso explica que somente alguém curioso e cuidadoso poderá devolver as histórias perdidas à biblioteca. Mariana descobre que deve combinar o mapa do livro com os símbolos do relógio.</p>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="2">Examinar os símbolos do relógio</button>
+                <button class="btn-proximo" data-proximo="3">Arriscar e seguir o mapa</button>
+            </div>
+        </section>
+
+        <section class="passo" id="passo-5">
+            <img src="img/passagem.svg" alt="Passagem secreta aberta pelo mecanismo do relógio">
+            <p>A chave gira e o relógio projeta uma estrela sobre a parede. Uma passagem se abre, revelando que a porta correta é aquela com o mesmo símbolo.</p>
+            <div class="opcoes">
+                <button class="btn-proximo" data-proximo="6">Seguir o símbolo da estrela</button>
+                <button class="btn-proximo" data-proximo="7">Ignorar a pista e escolher a lua</button>
+            </div>
+        </section>
+
+        <section class="passo final" id="passo-6">
+            <img src="img/tesouro.svg" alt="Sala secreta repleta de livros mágicos recuperados">
+            <p>Mariana encontra a Sala das Histórias Perdidas. Ao colocar o livro no centro da sala, todas as páginas desaparecidas voltam para as estantes. A biblioteca reconhece sua coragem e a nomeia Guardiã das Histórias.</p>
+            <h2>Final: Guardiã da Biblioteca ✨</h2>
+            <button class="btn-proximo reiniciar" data-proximo="0">Jogar novamente</button>
+        </section>
+
+        <section class="passo final" id="passo-7">
+            <img src="img/lua.svg" alt="Uma sala com espelhos e luz da lua">
+            <p>A porta da lua leva a uma sala de espelhos. Depois de alguns minutos, Mariana encontra a saída, mas o mistério continua sem solução. Talvez seja melhor prestar atenção às pistas na próxima tentativa.</p>
+            <h2>Final: O mistério continua 🌙</h2>
+            <button class="btn-proximo reiniciar" data-proximo="0">Tentar novamente</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
