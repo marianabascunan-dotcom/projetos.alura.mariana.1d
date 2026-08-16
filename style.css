@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #dbeafe;
+    color: #0f172a;
+    padding: 30px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabeçalho topo */
+.cabecalho {
+    text-align: center;
+    border: 2px solid #1e3a8a;
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.cabecalho p {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+#btn-tema {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: 1px solid #1e3a8a;
+    background-color: #ffffff;
+    color: #0f172a;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Grade de Cards em 3 colunas fixas como no vídeo */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card em formato de caixa/quadrado */
+.card {
+    background-color: #ffffff;
+    border: 2px solid #1e3a8a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    min-height: 320px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.card .autor {
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.card .descricao {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Quadrado de imagem centralizado no card */
+.card-imagem {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #1e3a8a;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Barra inferior com os 3 botões */
+.interacoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-like, .btn-comentario, .btn-fav {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-like.curtido {
+    background-color: #fecdd3;
+    border-color: #f43f5e;
+}
+
+/* Estilo do Modo Escuro */
+body.dark-mode {
+    background-color: #0b0f19;
+    color: #ffffff;
+}
+
+body.dark-mode .cabecalho,
+body.dark-mode .card {
+    background-color: #111827;
+    border-color: #38bdf8;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode #btn-tema {
+    background-color: #111827;
+    color: #ffffff;
+    border-color: #38bdf8;
+}
+
+body.dark-mode .card-imagem {
+    background-color: #1f2937;
+    border-color: #38bdf8;
+}
+
+body.dark-mode .btn-like,
+body.dark-mode .btn-comentario,
+body.dark-mode .btn-fav {
+    background-color: #1f2937;
+    color: #ffffff;
+    border-color: #374151;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

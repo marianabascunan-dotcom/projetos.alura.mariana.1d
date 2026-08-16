@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo dos Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>Universo dos Games!</h1>
+        <p>O melhor site sobre jogos!</p>
+        <button id="btn-tema">Mudar Tema 🌙</button>
+    </header>
+
+    <main class="container">
+        
+        <!-- Card 1 -->
+        <article class="card">
+            <h2>Seja bem-vindo ao Universo dos Games!</h2>
+            <p class="autor">Por: Mariana B</p>
+            <p class="descricao">Aqui você vai encontrar avaliações, indicações e opiniões sobre vários jogos incríveis, com especial destaque para franquias clássicas!</p>
+            <div class="card-imagem">🎮</div>
+            <div class="interacoes">
+                <button class="btn-like">❤️ <span class="likes-count">12</span></button>
+                <button class="btn-comentario">💬 4</button>
+                <button class="btn-fav">⭐</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+            <h2>Primeiro jogo do site: Minecraft!</h2>
+            <p class="autor">Por: Mariana B</p>
+            <p class="descricao">O jogo conta a história de sobrevivência em um mundo de blocos! Nele, você precisa explorar, construir e vencer os perigos da noite!</p>
+            <div class="card-imagem">⛏️</div>
+            <div class="interacoes">
+                <button class="btn-like">❤️ <span class="likes-count">25</span></button>
+                <button class="btn-comentario">💬 8</button>
+                <button class="btn-fav">⭐</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+            <h2>Iniciando no mundo de Roblox</h2>
+            <p class="autor">Por: Mariana B</p>
+            <p class="descricao">Uma plataforma incrível para jogar com amigos! Você pode explorar milhares de universos criados por jogadores do mundo todo.</p>
+            <div class="card-imagem">🤖</div>
+            <div class="interacoes">
+                <button class="btn-like">❤️ <span class="likes-count">18</span></button>
+                <button class="btn-comentario">💬 6</button>
+                <button class="btn-fav">⭐</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+            <h2>Super Mario Bros</h2>
+            <p class="autor">Por: Mariana B</p>
+            <p class="descricao">A jornada do encanador mais famoso do mundo para salvar o reino dos cogumelos. Um clássico absoluto dos videogames!</p>
+            <div class="card-imagem">🍄</div>
+            <div class="interacoes">
+                <button class="btn-like">❤️ <span class="likes-count">40</span></button>
+                <button class="btn-comentario">💬 15</button>
+                <button class="btn-fav">⭐</button>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+            <h2>The Legend of Zelda</h2>
+            <p class="autor">Por: Mariana B</p>
+            <p class="descricao">Uma aventura inesquecível em um mundo aberto gigante, cheia de mistérios, templos e desafios táticos marcantes.</p>
+            <div class="card-imagem">🗡️</div>
+            <div class="interacoes">
+                <button class="btn-like">❤️ <span class="likes-count">33</span></button>
+                <button class="btn-comentario">💬 11</button>
+                <button class="btn-fav">⭐</button>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+            <h2>Pokémon Legends</h2>
+            <p class="autor">Por: Mariana B</p>
+            <p class="descricao">Uma saga épica onde você deve capturar criaturas, explorar mapas vastos e batalhar para se tornar um treinador lendário!</p>
+            <div class="card-imagem">⚡</div>
+            <div class="interacoes">
+                <button class="btn-like">❤️ <span class="likes-count">29</span></button>
+                <button class="btn-comentario">💬 9</button>
+                <button class="btn-fav">⭐</button>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        // Mudar tema claro/escuro
+        const btnTema = document.getElementById('btn-tema');
+        btnTema.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Funcionalidade de curtidas
+        const botoesLike = document.querySelectorAll('.btn-like');
+        botoesLike.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const contador = botao.querySelector('.likes-count');
+                let quantidade = parseInt(contador.textContent);
+                
+                if (botao.classList.contains('curtido')) {
+                    quantidade--;
+                    botao.classList.remove('curtido');
+                } else {
+                    quantidade++;
+                    botao.classList.add('curtido');
+                }
+                contador.textContent = quantidade;
+            });
+        });
+    </script>
+</body>
+</html>
